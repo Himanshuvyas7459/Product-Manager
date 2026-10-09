@@ -182,13 +182,21 @@ function ProductDetails() {
               </h2>
 
               <div
-                className="break-words text-sm leading-7 text-gray-600 [&_h1]:mb-2 [&_h1]:text-2xl [&_h2]:mb-2 [&_h2]:text-xl [&_p]:mb-3 [&_ul]:ml-6 [&_ul]:list-disc [&_ol]:ml-6 [&_ol]:list-decimal [&_strong]:font-bold"
-                dangerouslySetInnerHTML={{
-                  __html:
-                    product.description || "No description available.",
-                }}
-              />
-            </div>
+  className="product-description break-words text-sm leading-7 text-gray-600
+    [&_h1]:mb-3 [&_h1]:mt-4 [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:leading-tight
+    [&_h2]:mb-3 [&_h2]:mt-4 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:leading-snug
+    [&_h3]:mb-2 [&_h3]:mt-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:leading-snug
+    [&_h4]:mb-2 [&_h4]:mt-3 [&_h4]:text-base [&_h4]:font-semibold
+    [&_p]:mb-3
+    [&_ul]:mb-3 [&_ul]:ml-6 [&_ul]:list-disc
+    [&_ol]:mb-3 [&_ol]:ml-6 [&_ol]:list-decimal
+    [&_li]:mb-1
+    [&_strong]:font-bold"
+  dangerouslySetInnerHTML={{
+    __html: product.description || "No description available.",
+  }}
+/>
+</div>
 
             {/* meta title */}
             <div className="mt-8 rounded-xl bg-indigo-50 p-4">

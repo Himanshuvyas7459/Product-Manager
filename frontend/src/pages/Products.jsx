@@ -8,6 +8,7 @@ import API from "../services/api"
 
 import "ckeditor5/ckeditor5.css";
 
+
 const initialForm = { metaTitle: "", name: "", slug: "", galleryImages: "", price: "", discountedPrice: "",description: ""};
 
 const Products = () => {
@@ -96,15 +97,16 @@ const Products = () => {
       return
     }
 
-    const payload = {
-      ...form,
-      price,
-      discountedPrice,
-      galleryImages: form.galleryImages
-        .split(/\n|,/)
-        .map((url) => url.trim())
-        .filter(Boolean)
-    }
+    
+const payload = {
+  ...form,
+  price,
+  discountedPrice,
+  galleryImages: form.galleryImages
+    .split(/\r?\n/)
+    .map((url) => url.trim())
+    .filter(Boolean)
+}
 
     try {
       setSaving(true)
@@ -563,13 +565,13 @@ const Products = () => {
                 </p>
               </div>
 
-              {/* Rich Text wale ke liye */}
+              {/* Rich Text */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-gray-700">
                   Product Description
                 </label>
 
-                <div className="overflow-hidden rounded-lg border border-gray-300 bg-white">
+                <div className="rounded-lg border border-gray-300 bg-white">
                   <CKEditor
                     editor={ClassicEditor}
                     config={{
