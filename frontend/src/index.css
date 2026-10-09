@@ -9,3 +9,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f8fafc;
 }
+
+.ck-editor__editable {
+  min-height: 100px;
+}
+
+.ck-content ul {
+  list-style: disc;
+  padding-left: 30px;
+}
+
+.ck-content ol {
+  list-style: decimal;
+  padding-left: 30px;
+}
+
+.ck-content li {
+  margin-bottom: 4px;
+}
+
+.ck.ck-dropdown__panel {
+  z-index: 1000;
+}
+
+.ck-powered-by {
+  display: none;
+}
